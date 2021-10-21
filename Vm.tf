@@ -52,8 +52,8 @@ resource "azurerm_virtual_machine" "vm-aula02" {
   }
   os_profile {
     computer_name  = "VmPrincipal"
-    admin_username = "testadmin"
-    admin_password = "Password1234!"
+    admin_username = var.user
+    admin_password = var.password
   }
   os_profile_linux_config {
     disable_password_authentication = false
